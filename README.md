@@ -13,3 +13,4 @@ Using:
 
 - https://github.com/nelsonic/node-parse-rss
 - https://github.com/sentientwaffle/feed-read
+- https://github.com/nelsonic/enlarge-image
