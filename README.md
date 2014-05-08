@@ -10,3 +10,6 @@ Using:
 
 - http://stackoverflow.com/questions/14747870/instagram-public-rss-feed
 - http://instagram.com/tags/paradise/feed/recent.rss
+
+- https://github.com/nelsonic/node-parse-rss
+- https://github.com/sentientwaffle/feed-read
