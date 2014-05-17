@@ -1,20 +1,28 @@
-[ { title: 'Anonymous Letter Inspires San Diego Community Impacted by Wildfires',
+[ 
+  { 
+    title: 'Anonymous Letter Inspires San Diego Community Impacted by Wildfires',
     content: '<img src="http://photos-e.ak.instagram.com/hphotos-ak-ash/10375545_1426545774279940_1056250382_n.jpg"/>',
     published: Fri May 23 2014 00:54:53 GMT+0100 (BST),
     author: '',
     link: 'http://photos-e.ak.instagram.com/hphotos-ak-ash/10375545_1426545774279940_1056250382_n.jpg',
     feed: 
-     { source: 'http://instagram.com/tags/paradise/feed/recent.rss',
+     { 
+       source: 'http://instagram.com/tags/paradise/feed/recent.rss',
        link: 'http://instagram.com',
-       name: 'Photos tagged as "paradise" on Instagram' } },
-  { title: '#instaislam #istamuslim #islamicreminders #islamicqoutes #deen #prayers #allah #allahuakbar #prophet #love #sunnah #follow #dua #daily #alhamdulillah #hadith #life #world #paradise #quran #guidance #azan #makkah #madina #duniya #dawah #hijab #beard',
+       name: 'Photos tagged as "paradise" on Instagram' 
+      }  
+  },
+  { 
+    title: '#instaislam #istamuslim #islamicreminders #islamicqoutes #deen #prayers #allah #allahuakbar #prophet #love #sunnah #follow #dua #daily #alhamdulillah #hadith #life #world #paradise #quran #guidance #azan #makkah #madina #duniya #dawah #hijab #beard',
     content: '<img src="http://photos-h.ak.instagram.com/hphotos-ak-prn/10362221_565890483531943_883710440_n.jpg"/>',
     published: Fri May 23 2014 01:21:43 GMT+0100 (BST),
     author: '',
     link: 'http://photos-h.ak.instagram.com/hphotos-ak-prn/10362221_565890483531943_883710440_n.jpg',
     feed: 
-     { source: 'http://instagram.com/tags/paradise/feed/recent.rss',
+     { 
+       source: 'http://instagram.com/tags/paradise/feed/recent.rss',
        link: 'http://instagram.com',
-       name: 'Photos tagged as "paradise" on Instagram' }
+       name: 'Photos tagged as "paradise" on Instagram' 
+     }
   }
 ]
