@@ -1,0 +1,32 @@
+{
+  "name": "instawall",
+  "version": "0.0.1",
+  "description": "A wall of images. ",
+  "main": "app.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nelsonic/instawall.git"
+  },
+  "keywords": [
+    "simple",
+    "image",
+    "wall",
+    "in",
+    "node.js"
+  ],
+  "author": "@nelsonic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nelsonic/instawall/issues"
+  },
+  "homepage": "https://github.com/nelsonic/instawall",
+  "dependencies": {
+    "feed-read": "0.0.1"
+  }
+}
