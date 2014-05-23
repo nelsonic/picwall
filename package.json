@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/nelsonic/instawall",
   "dependencies": {
-    "feed-read": "0.0.1"
+    "feed-read": "0.0.1",
+    "node-static": "~0.7.3"
   }
 }

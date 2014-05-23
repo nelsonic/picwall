@@ -1,18 +1,22 @@
 var feed = require('feed-read'),
 	http = require("http"),
 	port = process.env.PORT || 5000, // allow heroku/nodejitsu to set port 
-	url  = 'http://instagram.com/tags/work/feed/recent.rss';
+	url  = 'http://instagram.com/tags/'+'flowers'+'/feed/recent.rss';
 
 // fetch rss
 
-http.createServer(function (req, res) { 
+http.createServer(function (req, res) {
     // send basic http headers to client
     res.writeHead(200, {
         "Content-Type": "text/html",
         "Transfer-Encoding": "chunked"
     });
 
-    res.write("<html>\n<head>\n<title>RSS Feeds - Stream</title>\n</head>\n<body>");
+    res.write("<html>\n<head>\n<title>RSS Feeds - Stream</title>\n"
+    	+"<style media='screen' type='text/css'>"
+    	+"img { width:200px;} "
+    	+"</style>"
+    	+"</head>\n<body>");
 
 	feed(url, function(err, articles) {
 		if(err) {
@@ -21,14 +25,14 @@ http.createServer(function (req, res) {
 		// console.log('A',articles);
 		console.log('count:',articles.length);
 		for (var i = articles.length - 1; i >= 0; i--) {
-			console.log(i, articles[i].link, typeof articles[i].content);
+			console.log(i, articles[i].link);
 			res.write(articles[i].content.toString());
 			if(i === 0) {
 				console.log('END');
 				res.end("</body>\n</html>"); // end http response
 			}
-		};
-	})
+		}
+	});
 
 }).listen(port);
-console.log('HTTP Server Listening on: http://localhost:'+port)
+console.log('HTTP Server Listening on: http://localhost:'+port);
