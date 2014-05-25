@@ -1,11 +1,22 @@
-var feed = require('feed-read'),
-	http = require("http"),
-	port = process.env.PORT || 5000, // allow heroku/nodejitsu to set port 
-	url  = 'http://instagram.com/tags/'+'sunshine'+'/feed/recent.rss';
+var feed = require('feed-read'),  // read RSS feeds
+	fs   = require('fs'),         // used by static to check if file exsists
+	http = require("http"),       // respond to basic http requests
+	nstatic = require('node-static'),
+	file = new nstatic.Server('./static');
+	port = process.env.PORT || 3000, // allow heroku/nodejitsu to set port 
+	insta  = 'http://instagram.com/tags/'+'sunshine'+'/feed/recent.rss',
+	url = require('url');
 
 // fetch rss
 
 http.createServer(function (req, res) {
+
+	url_parts = url.parse(req.url, true),
+	query = url_parts.query;
+	console.log('U',url_parts);
+
+
+
     // send basic http headers to client
     res.writeHead(200, {
         "Content-Type": "text/html",
@@ -14,16 +25,17 @@ http.createServer(function (req, res) {
 
     res.write("<html>\n<head>\n<title>Instawall</title>\n"
     	+"<style media='screen' type='text/css'>"
-    	+"img { width:200px;} "
+    	+"img { width:100px;} "
     	+"</style>"
     	+"</head>\n<body>");
 
-	feed(url, function(err, articles) {
+	feed(insta, function(err, articles) {
 		if(err) {
 			console.log('ERROR',err);
 		}
 		// console.log('A',articles);
 		console.log('count:',articles.length);
+		// if there are no results/images show 404
 		for (var i = articles.length - 1; i >= 0; i--) {
 			console.log(i, articles[i].link);
 			res.write(articles[i].content.toString());

@@ -20,3 +20,12 @@ Using:
 - https://github.com/nelsonic/node-parse-rss
 - https://github.com/sentientwaffle/feed-read
 - https://github.com/nelsonic/enlarge-image
+
+## Read More
+
+### Instagram API
+
+- http://instagram.com/developer/
+- http://mashable.com/2013/09/19/instagram-api-uses/
+
+- Node HTTP Url parameters: http://stackoverflow.com/questions/6912584/how-to-get-get-query-string-variables-in-node-js
