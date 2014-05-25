@@ -10,6 +10,8 @@ Instagram RSS only returns 20 images:
 
 ![Instagram RSS for Cycling](http://i.imgur.com/7tn0wLd.jpg)
 
+So we need to save the images we've already seen to create a wall.
+
 Also, any keyword you search for returns selfies...
 
 Using:
