@@ -1,7 +1,7 @@
 var feed = require('feed-read'),
 	http = require("http"),
 	port = process.env.PORT || 5000, // allow heroku/nodejitsu to set port 
-	url  = 'http://instagram.com/tags/'+'flowers'+'/feed/recent.rss';
+	url  = 'http://instagram.com/tags/'+'sunshine'+'/feed/recent.rss';
 
 // fetch rss
 
@@ -12,7 +12,7 @@ http.createServer(function (req, res) {
         "Transfer-Encoding": "chunked"
     });
 
-    res.write("<html>\n<head>\n<title>RSS Feeds - Stream</title>\n"
+    res.write("<html>\n<head>\n<title>Instawall</title>\n"
     	+"<style media='screen' type='text/css'>"
     	+"img { width:200px;} "
     	+"</style>"
