@@ -1,22 +1,37 @@
-var static = require('node-static');
-var file = new static.Server('./static');
-require('http').createServer(function (request, response) {
+var static    = require('node-static');
+    staticDir = './static',
+	file      = new static.Server(staticDir),
+	fs        = require('fs'),
+	path	  = require('path');
 
 
-// Check if file is an accepted file type?
+require('http').createServer(function (req, res) {
+	var validFile = false;
 
 
-// fs.exists('/etc/passwd', function (exists) {
-//   util.debug(exists ? "it's there" : "no passwd!");
-// if(exists){
-// 	file.serve(request, response);
-// } else {
-	file.serveFile('/404.html', 404, {}, request, response);
-// }
-// });
+	// Check if file is an accepted file type?
+
+	console.log('R',req.url);
+	var f = __dirname+'/static'+req.url;
+
+	// only serve specific file types
+	if(req.url.indexOf('.') > -1){
+		ext = path.extname(req.ulr).toLowerCase();	
+		console.log('EXT:',ext);
+	}
+
+
+	fs.exists(f, function (exists) {
+		console.log(f,exists);
+		if(exists){
+			file.serve(req, res);
+		} else {
+			file.serveFile('/404.html', 404, {}, req, res);
+		}
+	});
     //
     // Serve files!
     //
 
 
-}).listen(8080);
+}).listen(3000);
