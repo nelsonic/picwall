@@ -3,21 +3,20 @@ feed   = require('feed-read'),  // read RSS feeds
 http   = require("http"),       // respond to basic http requests
 nstatic = require('node-static'),
 file   = new nstatic.Server('./static');
-port   = process.env.PORT || 3000, // allow heroku/nodejitsu to set port 
+port   = process.env.PORT || 3000, // allow heroku to set port 
 instart = 'http://instagram.com/tags',
 keyword = '/sunshine',
 instend = '/feed/recent.rss',
 url    = require('url'),
 path   = require('path');
 
-// fetch rss
 
 http.createServer(function (req, res) {
 
-	if(req.url.indexOf('.') > -1){ // STATIC Files
+	if(req.url.indexOf('.') > -1){ // Serve STATIC Files
 		var f = __dirname+'/static'+req.url;
 		var ext = path.extname(req.url).toLowerCase();
-		console.log('EXT >> ',ext);
+		console.log(req.url, ' is ',ext);
 
 		fs.exists(f, function (exists) {
 			console.log(f,exists);
@@ -38,7 +37,7 @@ http.createServer(function (req, res) {
 			"Transfer-Encoding": "chunked"
 		});
 
-		res.write("<html>\n<head>\n<title>Instawall</title>\n"
+		res.write("<html>\n<head>\n<title>PhotoWall</title>\n"
 	    	+"<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
 		if(req.url.length > 1){
 			keyword = req.url;
@@ -60,8 +59,6 @@ http.createServer(function (req, res) {
 				}
 			}
 		});
-
 	}
-
 }).listen(port);
 console.log('HTTP Server Listening on: http://localhost:'+port);
