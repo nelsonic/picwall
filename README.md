@@ -1,4 +1,4 @@
-instawall
+PhotoWall
 =========
 
 Instantly display a wall of photos related to a keyword.

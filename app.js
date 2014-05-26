@@ -47,15 +47,20 @@ http.createServer(function (req, res) {
 			if(err) {
 				console.log('ERROR',err);
 			}
-			// console.log('A',articles);
-			console.log('count:',articles.length);
-			// if there are no results/images show 404
-			for (var i = articles.length - 1; i >= 0; i--) {
-				console.log(i, articles[i].link);
-				res.write(articles[i].content.toString());
-				if(i === 0) {
-					console.log('END');
-					res.end("</body>\n</html>"); // end http response
+			if(typeof articles === "undefined") {
+				console.log('NO RESULTS');
+				res.end("<h1> no results </h1></body>\n</html>"); // end http response
+			} else {
+				// console.log('A',articles);
+				console.log('count:',articles.length);
+				// if there are no results/images show 404
+				for (var i = articles.length - 1; i >= 0; i--) {
+					console.log(i, articles[i].link);
+					res.write(articles[i].content.toString());
+					if(i === 0) {
+						console.log('END');
+						res.end("</body>\n</html>"); // end http response
+					}
 				}
 			}
 		});
