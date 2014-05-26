@@ -1,8 +1,8 @@
 var fs = require('fs'),         // used by static to check if file exsists
 feed   = require('feed-read'),  // read RSS feeds
 http   = require("http"),       // respond to basic http requests
-nstatic = require('node-static'),
-file   = new nstatic.Server('./static');
+nstatic = require('node-static'), // serve css and client js from same script
+file   = new nstatic.Server('./static'),
 port   = process.env.PORT || 3000, // allow heroku to set port 
 instart = 'http://instagram.com/tags',
 keyword = '/sunshine',
@@ -28,17 +28,16 @@ http.createServer(function (req, res) {
 		});
 	} else { // DYNAMIC Content
 
-		url_parts = url.parse(req.url, true),
-		query = url_parts.query;
-		console.log('U',url_parts);
+		// url_parts = url.parse(req.url, true),
+		// query = url_parts.query;
+		// console.log('U',url_parts);
 
 		res.writeHead(200, {
 			"Content-Type": "text/html",
 			"Transfer-Encoding": "chunked"
 		});
 
-		res.write("<html>\n<head>\n<title>PicWall</title>\n"
-	    	+"<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
+		res.write("<html>\n<head>\n<title>PicWall</title>\n<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
 		if(req.url.length > 1){
 			keyword = req.url;
 		}
