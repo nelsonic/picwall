@@ -3,6 +3,13 @@ PhotoWall
 
 Instantly display a wall of photos related to a keyword.
 
+## Try it!
+
+> http://picwall.herokuapp.com/
+
+
+### Background
+
 As part of my investigation into automated testing of image uploads
 I've decided to use instagram's public feed.
 
