@@ -5,7 +5,7 @@ Instantly display a wall of photos related to a keyword.
 
 ## Try it!
 
-> http://picwall.herokuapp.com/awesome
+> http://picwall.herokuapp.com (defaults to showing kittens ;-)
 
 
 ### Background
