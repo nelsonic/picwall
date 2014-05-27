@@ -10,7 +10,6 @@ instend = '/feed/recent.rss',
 url    = require('url'),
 path   = require('path');
 
-
 http.createServer(function (req, res) {
 
 	if(req.url.indexOf('.') > -1){ // Serve STATIC Files
