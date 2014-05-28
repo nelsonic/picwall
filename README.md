@@ -24,7 +24,6 @@ Also, any keyword you search for returns selfies...
 
 
 
-
 ## Read More
 
 ### Instagram API
@@ -33,6 +32,11 @@ Also, any keyword you search for returns selfies...
 - No Auth (Public RSS): http://stackoverflow.com/questions/14747870/instagram-public-rss-feed
 - Try is yourself (returns RSS/XML): http://instagram.com/tags/YOUR_KEYWORD/feed/recent.rss
 - Interesting Examples: http://mashable.com/2013/09/19/instagram-api-uses/
+
+### Flikr API
+
+- https://www.flickr.com/services/api/
+- http://code.flickr.net/
 
 ### Implementation Details
 
