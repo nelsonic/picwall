@@ -38,6 +38,11 @@ Also, any keyword you search for returns selfies...
 - https://www.flickr.com/services/api/
 - http://code.flickr.net/
 
+### Other
+
+- http://photobucket.com/images/kittens
+- https://developers.facebook.com/docs/graph-api/reference/v2.0/photo
+
 ### Implementation Details
 
 - Node HTTP Url parameters: http://stackoverflow.com/questions/6912584/how-to-get-get-query-string-variables-in-node-js
