@@ -36,7 +36,7 @@ http.createServer(function (req, res) {
 			"Transfer-Encoding": "chunked"
 		});
 
-		res.write("<html>\n<head>\n<title>PicWall</title>\n<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
+		res.write("<html>\n<head>\n<title>Hello Mario!</title>\n<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
 		if(req.url.length > 1){
 			keyword = req.url;
 		}
