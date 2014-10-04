@@ -10,6 +10,8 @@ instend = '/feed/recent.rss',
 url    = require('url'),
 path   = require('path');
 
+console.log('>> '+instart+keyword+instend);
+
 http.createServer(function (req, res) {
 
 	if(req.url.indexOf('.') > -1){ // Serve STATIC Files
@@ -36,7 +38,7 @@ http.createServer(function (req, res) {
 			"Transfer-Encoding": "chunked"
 		});
 
-		res.write("<html>\n<head>\n<title>Hello Mario!</title>\n<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
+		res.write("<html>\n<head>\n<title>Picwall!</title>\n<link rel='stylesheet' media='all' href='/style.css' /> </head>\n<body>");
 		if(req.url.length > 1){
 			keyword = req.url;
 		}
