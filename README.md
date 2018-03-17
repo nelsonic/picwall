@@ -33,7 +33,7 @@ Also, any keyword you search for returns selfies...
 - Try is yourself (returns RSS/XML): http://instagram.com/tags/YOUR_KEYWORD/feed/recent.rss
 - Interesting Examples: http://mashable.com/2013/09/19/instagram-api-uses/
 
-### Flikr API
+### Flickr API
 
 - https://www.flickr.com/services/api/
 - http://code.flickr.net/
